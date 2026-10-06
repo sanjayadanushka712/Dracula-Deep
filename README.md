@@ -76,7 +76,7 @@ Every token clears **WCAG AA** (4.5:1). Comments are deliberately below it at
 From the marketplace:
 
 ```
-ext install Sanjaya-Danushka.dracula-deep
+ext install sanjayadanushka.dracula-deep
 ```
 
 Or build from source:
