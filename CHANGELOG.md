@@ -13,13 +13,17 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
   unfocused-active `#1C1C1C` (10.3) → active `#202020` (12.3).
   Inactive tabs now sit 2.6 L* above the editor and the active tab a further
   5.0 L* above inactive, with each step subtle enough to stay low-glare.
+- Active tab label raised `#A8A8A8` → `#E8E8E8`, moving it from 6.85:1 to
+  13.30:1 against the active background. The active/inactive label gap was
+  only 1.46×, too small to pick a tab out of a row; it is now 2.82×.
+  Backgrounds and the accent border are deliberately untouched.
 
 ### Fixed
 
 - Added `tab.unfocusedActiveBackground`. Without it the active tab in a
   non-focused editor group had no background of its own.
 - Inactive tab labels moved `#7A7A7A` → `#828282`, clearing 4.5:1 against the
-  lighter inactive tab background (4.71:1). Active labels stay 6.85:1.
+  lighter inactive tab background (4.71:1).
 
 ## [0.1.1] - 2026-10-06
 
