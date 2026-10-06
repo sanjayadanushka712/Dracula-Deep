@@ -116,13 +116,6 @@ README cannot quietly drift away from the palette that actually ships.
 
 **Sanjaya Danushka** — <dsanjaya712@gmail.com>
 
-## Credits
-
-Theme structure and base palette are derived from
-[Vesper](https://marketplace.visualstudio.com/items?itemName=raunofreiberg.vesper)
-by Reuben Morgan, used under the MIT licence. The Dracula Deep palette layered on
-top is independent work and is not endorsed by the original author.
-
 ## Licence
 
 MIT
