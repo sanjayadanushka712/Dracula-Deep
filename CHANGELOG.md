@@ -3,6 +3,15 @@
 All notable changes to Dracula Deep are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-10-06
+
+### Fixed
+
+- The second README screenshot carried a hardcoded `width="1859" height="955"`.
+  GitHub narrows the width to its column but left the height pinned at 955px,
+  stretching the image vertically and blurring it. It now scales from its own
+  aspect ratio, the way the first screenshot always has.
+
 ## [1.1.0] - 2026-10-06
 
 ### Changed
