@@ -2,7 +2,7 @@
   "name": "dracula-deep",
   "displayName": "Dracula Deep",
   "description": "The eye-care angle stated outright. A low-glare dark theme for VS Code with a dimmed syntax palette, muted UI accents, and bracket-depth highlighting. Every text color clears WCAG AA.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "sanjayadanushka",
   "author": {
     "name": "Sanjaya Danushka",

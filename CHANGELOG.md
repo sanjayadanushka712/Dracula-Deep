@@ -3,6 +3,32 @@
 All notable changes to Dracula Deep are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-10-06
+
+### Changed
+
+- Inactive tab label darkened `#828282` → `#5A5A5A` so the active tab is the
+  only light label in the strip. Active stays `#E8E8E8`; the light/dark gap
+  widens from 2.82× to 5.07×. Both labels stay legible against their
+  backgrounds.
+- Active tab's bottom rule darkened `#B99A6E` → `#7A6446`, taking it from
+  7.17:1 to 3.39:1 against the tab bar — same amber, markedly less glare.
+  The top rule remains `#B99A6E`.
+- The bracket-pair ramp was six near-identical blue-greys (`#7E8C99` through
+  `#A8A8A8`) that rendered as a single colour. The six levels now cycle
+  amber → green → blue → purple → teal → pink, every one of them a colour
+  already used elsewhere in the syntax palette, inside a tight 6.3–7.8:1
+  brightness band.
+
+### Added
+
+- `tab.activeModifiedBorder` `#D9B98A` and `tab.inactiveModifiedBorder`
+  `#6B5636`, so modified tabs carry their own marker independent of the
+  accent rule.
+- Explicit `gitDecoration.untrackedResourceForeground` `#7FA37A` and
+  `gitDecoration.modifiedResourceForeground` `#B99A6E` instead of relying on
+  whatever the editor defaults to.
+
 ## [1.0.0] - 2026-10-06
 
 ### Changed
