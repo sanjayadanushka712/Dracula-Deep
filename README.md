@@ -13,7 +13,7 @@
 
 ![Dracula Deep in VS Code](images/screenshot.png)
 
-<img width="1859" height="955" alt="Screenshot_20261006_100419" src="https://github.com/user-attachments/assets/4f79bbec-48a5-462f-92f6-c87df545610a" />
+<img width="1859" height="955" alt="Dracula Deep in VS Code" src="images/screenshot-2.png" />
 
 
 ---
