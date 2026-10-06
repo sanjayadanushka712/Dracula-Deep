@@ -1,0 +1,50 @@
+{
+  "name": "dracula-deep",
+  "displayName": "Dracula Deep",
+  "description": "The eye-care angle stated outright. A low-glare dark theme for VS Code with a dimmed syntax palette, muted UI accents, and bracket-depth highlighting. Every text color clears WCAG AA.",
+  "version": "0.1.0",
+  "publisher": "Sanjaya-Danushka",
+  "author": {
+    "name": "Sanjaya Danushka",
+    "email": "dsanjaya712@gmail.com"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "eye-care",
+    "accessibility",
+    "low-contrast",
+    "dimmed",
+    "low-glare",
+    "night"
+  ],
+  "galleryBanner": {
+    "color": "#101010",
+    "theme": "dark"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Dracula Deep",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dracula-deep-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sanjaya-Danushka/Dracula-Deep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sanjaya-Danushka/Dracula-Deep/issues"
+  },
+  "homepage": "https://github.com/Sanjaya-Danushka/Dracula-Deep#readme"
+}

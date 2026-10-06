@@ -1,0 +1,6 @@
+.vscode/**
+.gitignore
+.github/**
+scripts/**
+**/*.map
+**/*.ts
