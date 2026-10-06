@@ -8,7 +8,8 @@ A low-glare dark theme for VS Code. Dracula Deep takes a familiar warm-dark
 layout and pulls every text color down out of maximum brightness, so a long
 session reads as calm rather than glaring.
 
-![Dracula Deep palette](icon.png)
+<img width="1843" height="944" alt="Screenshot_20261006_092727" src="https://github.com/user-attachments/assets/e82deff9-fd7a-42a6-b870-0d39f1664065" />
+
 
 ## Why
 
