@@ -3,6 +3,24 @@
 All notable changes to Dracula Deep are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-10-06
+
+### Changed
+
+- Rebuilt the tab strip as a four-step background ladder so the active tab is
+  findable from the background alone, not only from the accent border:
+  editor `#101010` (4.7 L*) → inactive `#161616` (7.2) → hover and
+  unfocused-active `#1C1C1C` (10.3) → active `#202020` (12.3).
+  Inactive tabs now sit 2.6 L* above the editor and the active tab a further
+  5.0 L* above inactive, with each step subtle enough to stay low-glare.
+
+### Fixed
+
+- Added `tab.unfocusedActiveBackground`. Without it the active tab in a
+  non-focused editor group had no background of its own.
+- Inactive tab labels moved `#7A7A7A` → `#828282`, clearing 4.5:1 against the
+  lighter inactive tab background (4.71:1). Active labels stay 6.85:1.
+
 ## [0.1.1] - 2026-10-06
 
 ### Fixed
