@@ -89,7 +89,7 @@ git clone https://github.com/Sanjaya-Danushka/Dracula-Deep.git
 cd Dracula-Deep
 npm install -g @vscode/vsce
 vsce package
-code --install-extension dracula-deep-0.1.0.vsix
+code --install-extension dracula-deep-0.1.1.vsix
 ```
 
 Then open the theme picker with <kbd>Ctrl</kbd>+<kbd>K</kbd>
@@ -118,13 +118,6 @@ README cannot quietly drift away from the palette that actually ships.
 ## Author
 
 **Sanjaya Danushka** — <dsanjaya712@gmail.com>
-
-## Credits
-
-Theme structure and base palette are derived from
-[Vesper](https://marketplace.visualstudio.com/items?itemName=raunofreiberg.vesper)
-by Reuben Morgan, used under the MIT licence. The Dracula Deep palette layered on
-top is independent work and is not endorsed by the original author.
 
 ## Licence
 
