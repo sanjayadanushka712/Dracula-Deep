@@ -1,55 +1,75 @@
-# Dracula Deep
+<p align="center">
+  <img src="icon.png" width="88" alt="Dracula Deep logo">
+</p>
 
-<img src="icon.png" width="128" alt="Dracula Deep logo">
+<h1 align="center">Dracula Deep</h1>
 
-**The eye-care angle stated outright.**
+<p align="center"><strong>The eye-care angle stated outright.</strong></p>
 
-A low-glare dark theme for VS Code. Dracula Deep takes a familiar warm-dark
-layout and pulls every text color down out of maximum brightness, so a long
-session reads as calm rather than glaring.
+<p align="center">
+  A low-glare dark theme for VS Code. Every foreground measured against the
+  background, nothing left at maximum brightness.
+</p>
 
-<img width="1843" height="944" alt="Screenshot_20261006_092727" src="https://github.com/user-attachments/assets/e82deff9-fd7a-42a6-b870-0d39f1664065" />
+![Dracula Deep in VS Code](images/screenshot.png)
 
+---
 
-## Why
+## The problem
 
-Long coding sessions on a dark background are easier when nothing sits at peak
-brightness. Dracula Deep is built around a measured palette rather than taste
-alone — every foreground is checked against the `#101010` editor background:
+Most dark themes are tuned by eye, and the eye is generous. The usual result is
+a pure-white foreground sitting at **19:1** against the editor background, amber
+accents smeared across fifteen different UI slots, and bright greens that pull
+focus away from the code you're actually reading.
 
-| Role | Color | Contrast |
-|---|---|---|
+None of that is a mistake on screen. Over a six-hour session it is a tax.
+
+## What Dracula Deep does differently
+
+**A palette with measurements, not vibes.** Every token colour is chosen to sit
+in a narrow band of brightness and is verified against the `#101010` editor
+background. Nothing is dimmed into illegibility, and nothing is left screaming.
+
+**Hue separates meaning, not brightness.** Keywords, strings, functions and
+types are told apart by hue rather than by intensity, so the palette never has
+one loud colour dominating the frame. The closest pair in the palette —
+attribute versus property — still measures 60 ΔE apart, comfortably above the
+~10 ΔE that most themes manage between adjacent token types.
+
+**Brackets recede.** Structural punctuation is dim slate instead of yet another
+competing hue, so nesting stays traceable without adding to the glare. Bracket
+*nesting depth* gets its own six-step ladder, which most dark themes leave as six
+identical shades of grey:
+
+![Bracket depth ladder](images/bracket-ladder.png)
+
+**UI accents are muted.** Warm colour is reserved for focus and selection rather
+than decoration. Buttons are dark grey, selected rows are neutral, focus rings
+are soft blue, and the activity bar badge is muted amber instead of a
+full-saturation block in the corner of your vision.
+
+## The numbers
+
+![Syntax palette](images/palette.png)
+
+| Role | Colour | Contrast |
+|:--|:--|--:|
 | plain text | `#A8A8A8` | 8.0:1 |
 | variables | `#C0CAD4` | 11.5:1 |
-| parameters | `#9FB0C0` italic | 8.6:1 |
+| parameters | `#9FB0C0` *italic* | 8.6:1 |
 | strings | `#7FAFA5` | 7.8:1 |
 | numbers, constants | `#8B9E86` | 6.6:1 |
 | keywords | `#9C8CC0` | 6.3:1 |
 | functions | `#B99A6E` | 7.2:1 |
 | types, classes | `#B2AE7C` | 8.4:1 |
 | properties | `#8FA8C4` | 7.8:1 |
+| tags | `#C08FA8` | 7.0:1 |
+| attributes | `#6FA5B0` | 7.0:1 |
 | brackets | `#7E8C99` | 5.5:1 |
-| comments | `#6B6B6B` italic | 3.6:1 |
+| comments | `#6B6B6B` *italic* | 3.6:1 |
 
-Every token clears WCAG AA (4.5:1). Comments are intentionally below it, at
-3.6:1, because de-emphasising them is the point.
-
-Run `scripts/check-contrast.py` to re-verify those numbers after any edit.
-
-## Design notes
-
-**Distinct hues, uniform loudness.** Token types are separated by hue rather
-than brightness, so nothing dominates. The closest pair in the palette
-(attribute vs property) still measures 60 ΔE apart.
-
-**Brackets recede.** Structural punctuation uses dim slate instead of another
-competing hue, so nesting is traceable without adding to the glare. Bracket
-*nesting depth* gets its own six-step ladder via
-`editorBracketHighlight.foreground1`–`foreground6`.
-
-**UI accents muted.** Warm accents are reserved for focus and selection rather
-than decoration. Buttons are dark grey, selected rows are neutral, focus rings
-are soft blue, and the activity bar badge is muted amber.
+Every token clears **WCAG AA** (4.5:1). Comments are deliberately below it at
+3.6:1 — making them recede is the entire point of a comment.
 
 ## Install
 
@@ -62,25 +82,47 @@ ext install Sanjaya-Danushka.dracula-deep
 Or build from source:
 
 ```sh
+git clone https://github.com/Sanjaya-Danushka/Dracula-Deep.git
+cd Dracula-Deep
 npm install -g @vscode/vsce
 vsce package
-code-insiders --install-extension dracula-deep-0.1.0.vsix
+code --install-extension dracula-deep-0.1.0.vsix
 ```
 
-Then pick **Dracula Deep** from <kbd>Ctrl</kbd>+<kbd>K</kbd>
-<kbd>Ctrl</kbd>+<kbd>T</kbd>.
+Then open the theme picker with <kbd>Ctrl</kbd>+<kbd>K</kbd>
+<kbd>Ctrl</kbd>+<kbd>T</kbd> and select **Dracula Deep**.
+
+Requires VS Code 1.80 or newer.
+
+## Verify it yourself
+
+The numbers in this README are not marketing copy — they are generated, and you
+can re-run them.
+
+```sh
+# every token against WCAG AA
+python3 scripts/check-contrast.py
+
+# regenerate the palette and ladder images from the theme file
+python3 scripts/render-preview.py
+```
+
+`check-contrast.py` exits non-zero if any token drops below AA, so it works as a
+CI gate. The palette and ladder imagery is rendered from
+`themes/dracula-deep-color-theme.json` rather than hand-picked, which means the
+README cannot quietly drift away from the palette that actually ships.
 
 ## Author
 
-**Sanjaya Danushka** <dsanjaya712@gmail.com>
+**Sanjaya Danushka** — <dsanjaya712@gmail.com>
 
 ## Credits
 
 Theme structure and base palette are derived from
 [Vesper](https://marketplace.visualstudio.com/items?itemName=raunofreiberg.vesper)
-by Reuben Morgan, used under the MIT licence. Dracula Deep is an independent
-palette layered on top and is not endorsed by the original author.
+by Reuben Morgan, used under the MIT licence. The Dracula Deep palette layered on
+top is independent work and is not endorsed by the original author.
 
-## License
+## Licence
 
 MIT
