@@ -11,6 +11,11 @@
   background, nothing left at maximum brightness.
 </p>
 
+<p align="center">
+  <a href="https://github.com/sanjayadanushka712/Dracula-Deep">GitHub</a> ·
+  <a href="https://github.com/sanjayadanushka712/Dracula-Deep/issues">Issues</a>
+</p>
+
 ![Dracula Deep in VS Code](images/screenshot.png)
 
 ![Dracula Deep in VS Code](images/screenshot-2.png)
@@ -84,11 +89,11 @@ ext install sanjayadanushka.dracula-deep
 Or build from source:
 
 ```sh
-git clone https://github.com/Sanjaya-Danushka/Dracula-Deep.git
+git clone https://github.com/sanjayadanushka712/Dracula-Deep.git
 cd Dracula-Deep
 npm install -g @vscode/vsce
 vsce package
-code --install-extension dracula-deep-0.1.1.vsix
+code --install-extension dracula-deep-*.vsix
 ```
 
 Then open the theme picker with <kbd>Ctrl</kbd>+<kbd>K</kbd>
@@ -116,7 +121,7 @@ README cannot quietly drift away from the palette that actually ships.
 
 ## Author
 
-**Sanjaya Danushka** — <dsanjaya712@gmail.com>
+**Sanjaya Danushka** — [@sanjayadanushka712](https://github.com/sanjayadanushka712)
 
 ## Licence
 
